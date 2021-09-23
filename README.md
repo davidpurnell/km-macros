@@ -11,7 +11,7 @@ Macro functionality includes:
 ## Dependencies
 A few of the macros have external dependencies...
 
-- [cliclick](https://github.com/BlueM/cliclick)
+- [cliclick](https://github.com/BlueM/cliclick) (can be installed with "brew install cliclick")
 - [SpaceInfo](https://github.com/davidpurnell/SpaceInfo)
 
 ## Installation
