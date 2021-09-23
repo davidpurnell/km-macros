@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>615427642.62326097</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>CenterWindowAt</string>
+						<key>HeightExpression</key>
+						<string>SCREENVISIBLE(Main,Height)</string>
+						<key>HorizontalExpression</key>
+						<string>SCREENVISIBLE(Front,MidX)</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Front</string>
+						<key>VerticalExpression</key>
+						<string>SCREENVISIBLE(Front,MidY)</string>
+						<key>WidthExpression</key>
+						<string>SCREENVISIBLE(Main,Width)</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>639580526.14916503</real>
+				<key>ModificationDate</key>
+				<real>651338737.26297796</real>
+				<key>Name</key>
+				<string>Center Window</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>WhileDown</string>
+						<key>KeyCode</key>
+						<integer>8</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6912</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>FAB929E8-3DC7-4193-8580-F40AAE14B4F4</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>UI Moving</string>
+		<key>ToggleMacroUID</key>
+		<string>E16C1214-9F52-48F8-8D2F-01885DA772B4</string>
+		<key>UID</key>
+		<string>F7A0484B-FB97-42A0-8DAC-EF869B576432</string>
+	</dict>
+</array>
+</plist>

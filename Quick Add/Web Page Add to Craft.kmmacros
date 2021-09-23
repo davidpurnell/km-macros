@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>CreationDate</key>
+		<real>647563811.43665802</real>
+		<key>KeyCode</key>
+		<integer>12</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionColor</key>
+						<string>Teal</string>
+						<key>ActionName</key>
+						<string>CONFIG: set Craft spaceId here</string>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string></string>
+						<key>Variable</key>
+						<string>Local__SpaceID</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.apple.Safari</string>
+										<key>Name</key>
+										<string>Safari</string>
+										<key>NewFile</key>
+										<string>/Applications/Safari.app</string>
+									</dict>
+									<key>ApplicationConditionType</key>
+									<string>Active</string>
+									<key>ConditionType</key>
+									<string>Application</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SystemAction</string>
+								<key>SystemAction</key>
+								<string>SystemBeep</string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>DisplayKind</key>
+								<string>Variable</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteJavaScriptForAutomation</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>//get a reference to the KM engine
+var app = Application.currentApplication()
+app.includeStandardAdditions = true
+var kmInst = app.systemAttribute("KMINSTANCE");
+var kme = Application("Keyboard Maestro Engine");
+ //get some KM vars
+var spaceId = kme.getvariable('Local__SpaceID', {instance: kmInst});
+
+// Instructions for getting Active Tab Name and URL
+// https://gist.github.com/vitorgalvao/5392178
+
+var safari = Application("Safari");
+var title = encodeURIComponent(safari.windows[0].currentTab.name());
+var url = encodeURIComponent(safari.windows[0].currentTab.url());
+
+`craftdocs://createdocument?spaceId=${spaceId}&amp;title=${title}&amp;content=${url}&amp;folderId=`
+</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+								<key>Variable</key>
+								<string>Local__craftURL</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>DisplayWindow</string>
+								<key>IsActive</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>InsertText</string>
+								<key>StyledText</key>
+								<data>
+								cnRmZAAAAAAD
+								AAAAAgAAAAcA
+								AABUWFQucnRm
+								AQAAAC6bAQAA
+								KwAAAAEAAACT
+								AQAAe1xydGYx
+								XGFuc2lcYW5z
+								aWNwZzEyNTJc
+								Y29jb2FydGYy
+								NTgwClxjb2Nv
+								YXRleHRzY2Fs
+								aW5nMFxjb2Nv
+								YXBsYXRmb3Jt
+								MHtcZm9udHRi
+								bFxmMFxmc3dp
+								c3NcZmNoYXJz
+								ZXQwIEhlbHZl
+								dGljYTt9Cntc
+								Y29sb3J0Ymw7
+								XHJlZDI1NVxn
+								cmVlbjI1NVxi
+								bHVlMjU1O1xy
+								ZWQwXGdyZWVu
+								MFxibHVlMDt9
+								CntcKlxleHBh
+								bmRlZGNvbG9y
+								dGJsOztcY3Nz
+								cmdiXGMwXGMw
+								XGMwXGM4NDcw
+								NlxjbmFtZSBj
+								b250cm9sVGV4
+								dENvbG9yO30K
+								XHBhcmRcdHg1
+								NjBcdHgxMTIw
+								XHR4MTY4MFx0
+								eDIyNDBcdHgy
+								ODAwXHR4MzM2
+								MFx0eDM5MjBc
+								dHg0NDgwXHR4
+								NTA0MFx0eDU2
+								MDBcdHg2MTYw
+								XHR4NjcyMFxw
+								YXJkaXJuYXR1
+								cmFsXHBhcnRp
+								Z2h0ZW5mYWN0
+								b3IwCgpcZjBc
+								ZnMyNiBcY2Yy
+								ICVWYXJpYWJs
+								ZSVMb2NhbF9f
+								Y3JhZnRVUkwl
+								fQEAAAAjAAAA
+								AQAAAAcAAABU
+								WFQucnRmEAAA
+								AJuhTGG2AQAA
+								AAAAAAAAAAA=
+								</data>
+								<key>Text</key>
+								<string>%Variable%Local__craftURL%</string>
+							</dict>
+							<dict>
+								<key>IsDefaultApplication</key>
+								<true/>
+								<key>MacroActionType</key>
+								<string>OpenURL</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>URL</key>
+								<string>%Variable%Local__craftURL%</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>641939810.22264504</real>
+				<key>ModificationDate</key>
+				<real>654104949.90744805</real>
+				<key>Name</key>
+				<string>Web Page Add to Craft</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>13</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>D190BA1B-B30A-4F36-9B9D-1E91939CD0A4</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>6912</integer>
+		<key>Name</key>
+		<string>Quick Add</string>
+		<key>PaletteUnderMouse</key>
+		<true/>
+		<key>Theme</key>
+		<dict>
+			<key>CenterText</key>
+			<false/>
+			<key>Size</key>
+			<integer>20</integer>
+			<key>UseDefaultInstead</key>
+			<false/>
+			<key>UseIcon</key>
+			<false/>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>D60D59EA-2A4E-4234-B738-3CB21D0451B8</string>
+		<key>UID</key>
+		<string>C12ADC80-6598-4C09-A8B5-0C226BDDEF24</string>
+	</dict>
+</array>
+</plist>

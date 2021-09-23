@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>638894953.91795099</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>Application</key>
+									<dict>
+										<key>BundleIdentifier</key>
+										<string>com.apple.finder</string>
+										<key>Name</key>
+										<string>Finder</string>
+										<key>NewFile</key>
+										<string>/System/Library/CoreServices/Finder.app</string>
+									</dict>
+									<key>ApplicationConditionType</key>
+									<string>Active</string>
+									<key>ConditionType</key>
+									<string>Application</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>DisplayKind</key>
+								<string>None</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteAppleScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>tell application "iTerm"	create window with default profileend tell</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>DisplayKind</key>
+								<string>None</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteAppleScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>tell application "Finder" to set theDIR to insertion location as aliastell application "iTerm"	create window with default profile	delay 0.5	tell front window		tell current session			write text ("cd " &amp; "\"" &amp; POSIX path of theDIR &amp; "\"")		end tell	end tellend tell
+delay 0.5tell application "System Events" to keystroke "k" using command down</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>641827301.73483801</real>
+				<key>ModificationDate</key>
+				<real>649023464.83168805</real>
+				<key>Name</key>
+				<string>New Terminal Here</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>17</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6912</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>E3F941F6-BD09-4E7B-981B-F4510F175B38</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>Misc</string>
+		<key>ToggleMacroUID</key>
+		<string>D420E2A8-FA87-4108-9BAF-C30A86BD4211</string>
+		<key>UID</key>
+		<string>2E210C24-6D6F-4D77-9C64-68749EC56701</string>
+	</dict>
+</array>
+</plist>

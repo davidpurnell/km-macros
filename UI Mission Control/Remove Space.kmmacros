@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>635718678.40245104</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string>%CurrentMouse%</string>
+						<key>Variable</key>
+						<string>Local Mouse</string>
+					</dict>
+					<dict>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>spaceinfo --active-space</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+						<key>Variable</key>
+						<string>CurrentSpace</string>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>CurrentSpace</string>
+									<key>VariableConditionType</key>
+									<string>IsEmpty</string>
+									<key>VariableValue</key>
+									<string>value</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array>
+							<dict>
+								<key>DisplayKind</key>
+								<string>None</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteAppleScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Text</key>
+								<string>tell application "Keyboard Maestro Engine"	set currSpace to getvariable "CurrentSpace"end telltell application "System Events"	tell application "Image Events" to set displayCount to count displays	tell application "Mission Control" to launch	do shell script "/usr/local/bin/cliclick m:400,10"	delay 0.25	do shell script "/usr/local/bin/cliclick m:410,10"		set theButton to "Desktop " &amp; currSpace		repeat with activeDisplay from 1 to displayCount		set buttonList to get name of every button of list 1 of group 2 of group activeDisplay of group 1 of process "Dock"		if buttonList contains theButton then			exit repeat		end if	end repeat	tell list 1 of group 2 of group activeDisplay of group 1 of process "Dock"		--log theButton		set Pos to the position of button theButton		set x to (item 1 of Pos)		set y to (item 2 of Pos)		do shell script "/usr/local/bin/cliclick kd:alt c:" &amp; x &amp; "," &amp; y &amp; " ku:alt"		delay 0.5	end tellend tell</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>Conditions</key>
+								<dict>
+									<key>ConditionList</key>
+									<array>
+										<dict>
+											<key>ConditionType</key>
+											<string>Modifiers</string>
+											<key>ModifiersDown</key>
+											<integer>0</integer>
+											<key>ModifiersUp</key>
+											<integer>6400</integer>
+										</dict>
+									</array>
+									<key>ConditionListMatch</key>
+									<string>All</string>
+								</dict>
+								<key>MacroActionType</key>
+								<string>PauseUntil</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+							</dict>
+							<dict>
+								<key>KeyCode</key>
+								<integer>53</integer>
+								<key>MacroActionType</key>
+								<string>SimulateKeystroke</string>
+								<key>Modifiers</key>
+								<integer>0</integer>
+								<key>ReleaseAll</key>
+								<false/>
+								<key>TargetApplication</key>
+								<dict/>
+								<key>TargetingType</key>
+								<string>Front</string>
+							</dict>
+							<dict>
+								<key>Action</key>
+								<string>SetMouse</string>
+								<key>MacroActionType</key>
+								<string>UseVariable</string>
+								<key>Variable</key>
+								<string>Local Mouse</string>
+							</dict>
+						</array>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>IsDisclosed</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>SystemAction</string>
+								<key>SystemAction</key>
+								<string>SystemBeep</string>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>626733942.27094495</real>
+				<key>ModificationDate</key>
+				<real>654017661.43752801</real>
+				<key>Name</key>
+				<string>Remove Space</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>125</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>6400</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>75A684A2-3F77-44A2-9270-0DF3560685BC</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>UI Mission Control</string>
+		<key>ToggleMacroUID</key>
+		<string>0C92D032-1138-466D-9F7E-4C24253D0A67</string>
+		<key>UID</key>
+		<string>86006886-CB46-470A-8C39-033BBEB65063</string>
+	</dict>
+</array>
+</plist>

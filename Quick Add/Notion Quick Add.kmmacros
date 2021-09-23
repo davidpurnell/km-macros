@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>OnceWithPalette</string>
+		<key>AddToMacroPalette</key>
+		<false/>
+		<key>AddToStatusMenu</key>
+		<false/>
+		<key>CreationDate</key>
+		<real>647563811.43665802</real>
+		<key>KeyCode</key>
+		<integer>12</integer>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>ActionColor</key>
+						<string>Green</string>
+						<key>MacroActionType</key>
+						<string>Comment</string>
+						<key>StyledText</key>
+						<data>
+						cnRmZAAAAAADAAAAAgAAAAcAAABU
+						WFQucnRmAQAAAC7TAgAAKwAAAAEA
+						AADLAgAAe1xydGYxXGFuc2lcYW5z
+						aWNwZzEyNTJcY29jb2FydGYyNTgw
+						Clxjb2NvYXRleHRzY2FsaW5nMFxj
+						b2NvYXBsYXRmb3JtMHtcZm9udHRi
+						bFxmMFxmc3dpc3NcZmNoYXJzZXQw
+						IEhlbHZldGljYTt9CntcY29sb3J0
+						Ymw7XHJlZDI1NVxncmVlbjI1NVxi
+						bHVlMjU1O1xyZWQwXGdyZWVuMFxi
+						bHVlMDt9CntcKlxleHBhbmRlZGNv
+						bG9ydGJsOztcY3NzcmdiXGMwXGMw
+						XGMwXGM4NDcwNlxjbmFtZSBjb250
+						cm9sVGV4dENvbG9yO30KXHBhcmRc
+						dHg1NjBcdHgxMTIwXHR4MTY4MFx0
+						eDIyNDBcdHgyODAwXHR4MzM2MFx0
+						eDM5MjBcdHg0NDgwXHR4NTA0MFx0
+						eDU2MDBcdHg2MTYwXHR4NjcyMFxw
+						YXJkaXJuYXR1cmFsXHBhcnRpZ2h0
+						ZW5mYWN0b3IwCgpcZjBcZnMyNiBc
+						Y2YyIE1ha2UgYSBuZXcgQVBJIGlu
+						dGVncmF0aW9uIGhlcmU6IHtcZmll
+						bGR7XCpcZmxkaW5zdHtIWVBFUkxJ
+						TksgImh0dHBzOi8vd3d3Lm5vdGlv
+						bi5zby9teS1pbnRlZ3JhdGlvbnMi
+						fX17XGZsZHJzbHQgaHR0cHM6Ly93
+						d3cubm90aW9uLnNvL215LWludGVn
+						cmF0aW9uc319XApcClRoaXMgaXMg
+						d2hlcmUgeW91XCc5MmxsIGdldCB0
+						aGUgdG9rZW4uXApcClVzZSBcJzkz
+						Y29weSBsaW5rXCc5NCBpbiB0aGUg
+						Tm90aW9uIGFwcCBvciB1c2UgdGhl
+						IHdlYiB2aWV3IHRvIGdldCB0aGUg
+						ZGVzaXJlZCBwYWdlIGlkLlwKXApU
+						aGUgcGFnZSBpZCBpcyB0aGUgbG9u
+						ZyBoYXNoIGFmdGVyIHRoZSBwYWdl
+						IG5hbWUufQEAAAAjAAAAAQAAAAcA
+						AABUWFQucnRmEAAAAFWnTGG2AQAA
+						AAAAAAAAAAA=
+						</data>
+						<key>Title</key>
+						<string>Notion API hints</string>
+					</dict>
+					<dict>
+						<key>ActionColor</key>
+						<string>Teal</string>
+						<key>ActionName</key>
+						<string>CONFIG: set Notion API Integration Token here</string>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string></string>
+						<key>Variable</key>
+						<string>Local__NotionToken</string>
+					</dict>
+					<dict>
+						<key>ActionColor</key>
+						<string>Teal</string>
+						<key>ActionName</key>
+						<string>CONFIG: set Notion API page id here</string>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string></string>
+						<key>Variable</key>
+						<string>Local__NotionPageID</string>
+					</dict>
+					<dict>
+						<key>Floating</key>
+						<true/>
+						<key>IsDisclosed</key>
+						<false/>
+						<key>MacroActionType</key>
+						<string>CustomPrompt</string>
+						<key>Text</key>
+						<string>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Add to Notion Inbox&lt;/title&gt;
+    &lt;style type="text/css"&gt;
+      body {
+        font-family: system-ui;
+        font-size: medium;
+        background-color: #ececec;
+        margin: 5px;
+      }
+      textarea {
+        width: 90vw;
+        font-size: small;
+        border: solid #ececec 1px;
+      }
+      textarea:focus {
+        border: solid #81adef 1px;
+      }
+      .Div {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .btnDefault,
+      .btnCancel {
+        border-radius: 5px;
+        color: black;
+        text-decoration: none;
+        margin-left: 5px;
+        padding: 2px 20px 2px 20px;
+        filter: drop-shadow(1px 1px 1px #c8c8c8);
+      }
+
+      .btnDefault {
+        background: #1385ff;
+        color: white;
+        border: 0px;
+      }
+
+      .btnCancel {
+        background: white;
+        color: black;
+        border: 0px;
+      }
+
+      .btnDefault:active,
+      .btnCancel:active {
+       background-color:  #006feb;
+       color: white;
+      }
+      .btnCancel:active ~ .btnDefault {
+         background: white;
+         color: black;
+    &lt;/style&gt;
+    &lt;script&gt;
+      document.addEventListener(
+        "keydown",
+        (event) =&gt; {
+          if (event.metaKey &amp;&amp; event.keyCode == "13") {
+            window.KeyboardMaestro.Submit('Save');
+          }
+        },
+        false
+      );
+    &lt;/script&gt;
+  &lt;/head&gt;
+
+  &lt;body data-kmwindow="500,190"&gt;
+    &lt;form action="#" method="post" id="NotionForm"&gt;
+      &lt;div class="Div"&gt;
+            &lt;textarea
+              maxlength="2000"
+              class="textAreaField"
+              name="NotionContent"
+              id="message"
+              rows="6"
+              autofocus
+            &gt;&lt;/textarea&gt;
+      &lt;/div&gt;
+      &lt;div class="Div"&gt;
+        &lt;button
+          class="btnCancel"
+          name="Cancel"
+          type="button"
+          title="Press ESC to cancel"
+          onclick="window.KeyboardMaestro.Cancel('Cancel')"
+        &gt;
+          Cancel
+        &lt;/button&gt;
+        &lt;button
+          class="btnDefault"
+          name="Save"
+          type="submit"
+          title="Press RETURN to submit"
+          onclick="window.KeyboardMaestro.Submit('Save')"
+        &gt;
+          Save
+        &lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>Conditions</key>
+						<dict>
+							<key>ConditionList</key>
+							<array>
+								<dict>
+									<key>ConditionType</key>
+									<string>Variable</string>
+									<key>Variable</key>
+									<string>NotionContent</string>
+									<key>VariableConditionType</key>
+									<string>IsNotEmpty</string>
+									<key>VariableValue</key>
+									<string>value</string>
+								</dict>
+							</array>
+							<key>ConditionListMatch</key>
+							<string>All</string>
+						</dict>
+						<key>ElseActions</key>
+						<array/>
+						<key>MacroActionType</key>
+						<string>IfThenElse</string>
+						<key>ThenActions</key>
+						<array>
+							<dict>
+								<key>Action</key>
+								<string>IgnoreCaseRegEx</string>
+								<key>MacroActionType</key>
+								<string>SearchReplace</string>
+								<key>Replace</key>
+								<string>\\n</string>
+								<key>Search</key>
+								<string>\n</string>
+								<key>Source</key>
+								<string>Variable</string>
+								<key>Variable</key>
+								<string>NotionContent</string>
+							</dict>
+							<dict>
+								<key>DisplayKind</key>
+								<string>None</string>
+								<key>HonourFailureSettings</key>
+								<true/>
+								<key>IncludeStdErr</key>
+								<false/>
+								<key>MacroActionType</key>
+								<string>ExecuteShellScript</string>
+								<key>Path</key>
+								<string></string>
+								<key>Source</key>
+								<string>Variable</string>
+								<key>SourceVariable</key>
+								<string>NotionContent</string>
+								<key>Text</key>
+								<string>#!/bin/bash
+
+curl -X PATCH https://api.notion.com/v1/blocks/$KMVAR_Local__NotionPageID/children \
+  -H "Authorization: Bearer $KMVAR_Local__NotionToken" \
+  -H "Content-Type: application/json" \
+  -H "Notion-Version: 2021-05-13" \
+  --data '{ "children": [ { "object": "block", "type": "paragraph", "paragraph": { "text": [ { "type": "text", "text": { "content": "'"$KMVAR_NotionContent"'" } } ] } } ] }'</string>
+								<key>TimeOutAbortsMacro</key>
+								<true/>
+								<key>TrimResults</key>
+								<true/>
+								<key>TrimResultsNew</key>
+								<true/>
+								<key>UseText</key>
+								<true/>
+							</dict>
+						</array>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+					</dict>
+					<dict>
+						<key>MacroActionType</key>
+						<string>SetVariableToText</string>
+						<key>Text</key>
+						<string></string>
+						<key>Variable</key>
+						<string>NotionContent</string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>646071309.91155601</real>
+				<key>ModificationDate</key>
+				<real>654106333.74530005</real>
+				<key>Name</key>
+				<string>Notion Quick Add</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>Pressed</string>
+						<key>KeyCode</key>
+						<integer>45</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>0</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>EDC146AB-6BC4-4088-94DA-B88F1BBDDFAB</string>
+			</dict>
+		</array>
+		<key>Modifiers</key>
+		<integer>6912</integer>
+		<key>Name</key>
+		<string>Quick Add</string>
+		<key>PaletteUnderMouse</key>
+		<true/>
+		<key>Theme</key>
+		<dict>
+			<key>CenterText</key>
+			<false/>
+			<key>Size</key>
+			<integer>20</integer>
+			<key>UseDefaultInstead</key>
+			<false/>
+			<key>UseIcon</key>
+			<false/>
+		</dict>
+		<key>ToggleMacroUID</key>
+		<string>D60D59EA-2A4E-4234-B738-3CB21D0451B8</string>
+		<key>UID</key>
+		<string>C12ADC80-6598-4C09-A8B5-0C226BDDEF24</string>
+	</dict>
+</array>
+</plist>

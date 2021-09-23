@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Activate</key>
+		<string>Normal</string>
+		<key>CreationDate</key>
+		<real>635557257.08219504</real>
+		<key>Macros</key>
+		<array>
+			<dict>
+				<key>Actions</key>
+				<array>
+					<dict>
+						<key>Action</key>
+						<string>ResizeWindowBy</string>
+						<key>HeightExpression</key>
+						<string>300</string>
+						<key>HorizontalExpression</key>
+						<string>-20</string>
+						<key>MacroActionType</key>
+						<string>ManipulateWindow</string>
+						<key>TargetApplication</key>
+						<dict/>
+						<key>Targeting</key>
+						<string>FrontWindow</string>
+						<key>TargetingType</key>
+						<string>Front</string>
+						<key>VerticalExpression</key>
+						<string>0</string>
+						<key>WidthExpression</key>
+						<string>300</string>
+						<key>WindowIndexExpression</key>
+						<string>2</string>
+						<key>WindowName</key>
+						<string></string>
+					</dict>
+				</array>
+				<key>CreationDate</key>
+				<real>635712529.45223498</real>
+				<key>ModificationDate</key>
+				<real>651170258.75883603</real>
+				<key>Name</key>
+				<string>Squish Window on Right</string>
+				<key>Triggers</key>
+				<array>
+					<dict>
+						<key>FireType</key>
+						<string>WhileDown</string>
+						<key>KeyCode</key>
+						<integer>115</integer>
+						<key>MacroTriggerType</key>
+						<string>HotKey</string>
+						<key>Modifiers</key>
+						<integer>4352</integer>
+					</dict>
+				</array>
+				<key>UID</key>
+				<string>3D5A4B87-D9CC-434B-8533-D512FC02C91F</string>
+			</dict>
+		</array>
+		<key>Name</key>
+		<string>UI Resizing</string>
+		<key>ToggleMacroUID</key>
+		<string>2AB51DA1-2A52-47F2-B6F3-270EB20574A1</string>
+		<key>UID</key>
+		<string>E0E407AF-61FF-420C-AD02-EB8828B8B970</string>
+	</dict>
+</array>
+</plist>
