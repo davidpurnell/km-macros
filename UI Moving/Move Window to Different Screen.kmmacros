@@ -36,7 +36,7 @@
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
-						<string>%ScreenVisible%SC%</string>
+						<string>%ScreenVisible%AD%</string>
 						<key>Variable</key>
 						<string>S1</string>
 					</dict>
@@ -44,7 +44,7 @@
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
-						<string>%ScreenVisible%SN%</string>
+						<string>%ScreenVisible%ND%</string>
 						<key>Variable</key>
 						<string>S2</string>
 					</dict>
@@ -52,51 +52,9 @@
 						<key>MacroActionType</key>
 						<string>SetVariableToText</string>
 						<key>Text</key>
-						<string>%ScreenVisible%SP%</string>
+						<string>%ScreenVisible%PD%</string>
 						<key>Variable</key>
 						<string>S3</string>
-					</dict>
-					<dict>
-						<key>Action</key>
-						<string>DisplayWindow</string>
-						<key>IsActive</key>
-						<false/>
-						<key>MacroActionType</key>
-						<string>InsertText</string>
-						<key>StyledText</key>
-						<data>
-						cnRmZAAAAAADAAAAAgAAAAcAAABU
-						WFQucnRmAQAAAC7aAQAAKwAAAAEA
-						AADSAQAAe1xydGYxXGFuc2lcYW5z
-						aWNwZzEyNTJcY29jb2FydGYyNTgw
-						Clxjb2NvYXRleHRzY2FsaW5nMFxj
-						b2NvYXBsYXRmb3JtMHtcZm9udHRi
-						bFxmMFxmc3dpc3NcZmNoYXJzZXQw
-						IEhlbHZldGljYTt9CntcY29sb3J0
-						Ymw7XHJlZDI1NVxncmVlbjI1NVxi
-						bHVlMjU1O1xyZWQwXGdyZWVuMFxi
-						bHVlMDt9CntcKlxleHBhbmRlZGNv
-						bG9ydGJsOztcY3NzcmdiXGMwXGMw
-						XGMwXGM4NDcwNlxjbmFtZSBjb250
-						cm9sVGV4dENvbG9yO30KXHBhcmRc
-						dHg1NjBcdHgxMTIwXHR4MTY4MFx0
-						eDIyNDBcdHgyODAwXHR4MzM2MFx0
-						eDM5MjBcdHg0NDgwXHR4NTA0MFx0
-						eDU2MDBcdHg2MTYwXHR4NjcyMFxw
-						YXJkaXJuYXR1cmFsXHBhcnRpZ2h0
-						ZW5mYWN0b3IwCgpcZjBcZnMyNiBc
-						Y2YyIEN1cnJlbnQgU2NyZWVuOiAl
-						VmFyaWFibGUlU0MlXApQcmV2aW91
-						cyBTY3JlZW46ICVWYXJpYWJsZSVT
-						UCVcCk5leHQgU2NyZWVuOiAlVmFy
-						aWFibGUlU04lfQEAAAAjAAAAAQAA
-						AAcAAABUWFQucnRmEAAAAEssJGG2
-						AQAAAAAAAAAAAAA=
-						</data>
-						<key>Text</key>
-						<string>Current Screen: %Variable%SC%
-Previous Screen: %Variable%SP%
-Next Screen: %Variable%SN%</string>
 					</dict>
 					<dict>
 						<key>Conditions</key>
@@ -203,7 +161,7 @@ Next Screen: %Variable%SN%</string>
 				<key>CreationDate</key>
 				<real>651258915.48480797</real>
 				<key>ModificationDate</key>
-				<real>654019431.02464902</real>
+				<real>656540577.63363898</real>
 				<key>Name</key>
 				<string>Move Window to Different Screen</string>
 				<key>Triggers</key>

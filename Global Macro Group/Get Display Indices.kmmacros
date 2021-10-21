@@ -36,17 +36,53 @@
 						<key>UseText</key>
 						<true/>
 						<key>Variable</key>
-						<string>Local__ActiveDisplay</string>
+						<string>AD</string>
 					</dict>
 					<dict>
-						<key>MacroActionType</key>
-						<string>SetVariableToCalculation</string>
-						<key>Text</key>
-						<string>SCREENCOUNT()</string>
-						<key>UseFormat</key>
+						<key>DisplayKind</key>
+						<string>Variable</string>
+						<key>HonourFailureSettings</key>
+						<true/>
+						<key>IncludeStdErr</key>
 						<false/>
+						<key>MacroActionType</key>
+						<string>ExecuteShellScript</string>
+						<key>Path</key>
+						<string></string>
+						<key>Source</key>
+						<string>Nothing</string>
+						<key>Text</key>
+						<string>spaceinfo -d $KMVAR_AD --total-displays --active-space --first-space --last-space</string>
+						<key>TimeOutAbortsMacro</key>
+						<true/>
+						<key>TrimResults</key>
+						<true/>
+						<key>TrimResultsNew</key>
+						<true/>
+						<key>UseText</key>
+						<true/>
 						<key>Variable</key>
-						<string>Local__TotalDisplays</string>
+						<string>Local__SpaceInfo</string>
+					</dict>
+					<dict>
+						<key>Action</key>
+						<string>IgnoreCaseRegEx</string>
+						<key>Captures</key>
+						<array>
+							<string>Local__SpaceInfos</string>
+							<string>Local__TotalDisplays</string>
+							<string>AS</string>
+							<string>FS</string>
+							<string>LS</string>
+						</array>
+						<key>MacroActionType</key>
+						<string>SearchRegEx</string>
+						<key>Search</key>
+						<string>(\d+)\s(\d+)\s(\d+)\s(\d+)</string>
+						<key>Source</key>
+						<string>Variable</string>
+						<key>Variable</key>
+						<string>Local__SpaceInfo</string>
 					</dict>
 					<dict>
 						<key>ActionColor</key>
@@ -54,11 +90,11 @@
 						<key>MacroActionType</key>
 						<string>SetVariableToCalculation</string>
 						<key>Text</key>
-						<string>Local__ActiveDisplay + 1</string>
+						<string>AD + 1</string>
 						<key>UseFormat</key>
 						<false/>
 						<key>Variable</key>
-						<string>Local__NextDisplay</string>
+						<string>ND</string>
 					</dict>
 					<dict>
 						<key>ActionColor</key>
@@ -66,11 +102,11 @@
 						<key>MacroActionType</key>
 						<string>SetVariableToCalculation</string>
 						<key>Text</key>
-						<string>Local__ActiveDisplay - 1</string>
+						<string>AD - 1</string>
 						<key>UseFormat</key>
 						<false/>
 						<key>Variable</key>
-						<string>Local__PrevDisplay</string>
+						<string>PD</string>
 					</dict>
 					<dict>
 						<key>ActionColor</key>
@@ -83,7 +119,7 @@
 									<key>ConditionType</key>
 									<string>Calculation</string>
 									<key>Text</key>
-									<string>Local__NextDisplay &gt; Local__TotalDisplays</string>
+									<string>ND &gt; Local__TotalDisplays</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -103,7 +139,7 @@
 								<key>UseFormat</key>
 								<false/>
 								<key>Variable</key>
-								<string>Local__NextDisplay</string>
+								<string>ND</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
@@ -120,7 +156,7 @@
 									<key>ConditionType</key>
 									<string>Calculation</string>
 									<key>Text</key>
-									<string>Local__PrevDisplay &lt; 1</string>
+									<string>PD &lt; 1</string>
 								</dict>
 							</array>
 							<key>ConditionListMatch</key>
@@ -140,59 +176,70 @@
 								<key>UseFormat</key>
 								<false/>
 								<key>Variable</key>
-								<string>Local__PrevDisplay</string>
+								<string>PD</string>
 							</dict>
 						</array>
 						<key>TimeOutAbortsMacro</key>
 						<true/>
 					</dict>
 					<dict>
-						<key>MacroActionType</key>
-						<string>SetVariableToCalculation</string>
-						<key>Text</key>
-						<string>Local__NextDisplay</string>
-						<key>UseFormat</key>
-						<false/>
-						<key>Variable</key>
-						<string>SN</string>
-					</dict>
-					<dict>
-						<key>MacroActionType</key>
-						<string>SetVariableToCalculation</string>
-						<key>Text</key>
-						<string>Local__ActiveDisplay</string>
-						<key>UseFormat</key>
-						<false/>
-						<key>Variable</key>
-						<string>SC</string>
-					</dict>
-					<dict>
-						<key>MacroActionType</key>
-						<string>SetVariableToCalculation</string>
-						<key>Text</key>
-						<string>Local__PrevDisplay</string>
-						<key>UseFormat</key>
-						<false/>
-						<key>Variable</key>
-						<string>SP</string>
-					</dict>
-					<dict>
 						<key>Action</key>
-						<string>DisplayBriefly</string>
+						<string>DisplayWindow</string>
 						<key>IsActive</key>
 						<false/>
 						<key>MacroActionType</key>
 						<string>InsertText</string>
+						<key>StyledText</key>
+						<data>
+						cnRmZAAAAAADAAAAAgAAAAcAAABU
+						WFQucnRmAQAAAC5zAgAAKwAAAAEA
+						AABrAgAAe1xydGYxXGFuc2lcYW5z
+						aWNwZzEyNTJcY29jb2FydGYyNTgw
+						Clxjb2NvYXRleHRzY2FsaW5nMFxj
+						b2NvYXBsYXRmb3JtMHtcZm9udHRi
+						bFxmMFxmc3dpc3NcZmNoYXJzZXQw
+						IEhlbHZldGljYTt9CntcY29sb3J0
+						Ymw7XHJlZDI1NVxncmVlbjI1NVxi
+						bHVlMjU1O1xyZWQwXGdyZWVuMFxi
+						bHVlMDt9CntcKlxleHBhbmRlZGNv
+						bG9ydGJsOztcY3NzcmdiXGMwXGMw
+						XGMwXGM4NDcwNlxjbmFtZSBjb250
+						cm9sVGV4dENvbG9yO30KXHBhcmRc
+						dHg1NjBcdHgxMTIwXHR4MTY4MFx0
+						eDIyNDBcdHgyODAwXHR4MzM2MFx0
+						eDM5MjBcdHg0NDgwXHR4NTA0MFx0
+						eDU2MDBcdHg2MTYwXHR4NjcyMFxw
+						YXJkaXJuYXR1cmFsXHBhcnRpZ2h0
+						ZW5mYWN0b3IwCgpcZjBcZnMyNiBc
+						Y2YyIFByZXZpb3VzIERpc3BsYXk6
+						ICVWYXJpYWJsZSVQRCVcCkN1cnJl
+						bnQgRGlzcGxheTolVmFyaWFibGUl
+						QUQlXApOZXh0IERpc3BsYXk6ICVW
+						YXJpYWJsZSVORCVcCkFjdGl2ZSBT
+						cGFjZTogJVZhcmlhYmxlJUFTJVwK
+						QWN0aXZlIERpc3BsYXk6ICVWYXJp
+						YWJsZSVBRCVcCkZpcnN0IFNwYWNl
+						IG9uIEFjdGl2ZSBEaXNwbGF5OiAl
+						VmFyaWFibGUlRlMlXApMYXN0IFNw
+						YWNlIG9uIEFjdGl2ZSBEaXNwbGF5
+						OiAlVmFyaWFibGUlTFMlfQEAAAAj
+						AAAAAQAAAAcAAABUWFQucnRmEAAA
+						AJnOcWG2AQAAAAAAAAAAAAA=
+						</data>
 						<key>Text</key>
-						<string>Previous Screen: %Variable%SP%
-Current Screen:%Variable%SC%
-Next Screen: %Variable%SN%</string>
+						<string>Previous Display: %Variable%PD%
+Current Display:%Variable%AD%
+Next Display: %Variable%ND%
+Active Space: %Variable%AS%
+Active Display: %Variable%AD%
+First Space on Active Display: %Variable%FS%
+Last Space on Active Display: %Variable%LS%</string>
 					</dict>
 				</array>
 				<key>CreationDate</key>
 				<real>654018161.80539894</real>
 				<key>ModificationDate</key>
-				<real>654019644.05740201</real>
+				<real>656542192.22379601</real>
 				<key>Name</key>
 				<string>Get Display Indices</string>
 				<key>Triggers</key>

@@ -318,7 +318,7 @@
 												<key>HeightExpression</key>
 												<string>300</string>
 												<key>HorizontalExpression</key>
-												<string>SCREENVISIBLE(SP,Right, -.5%) - WINDOW(0,Width)</string>
+												<string>SCREENVISIBLE(PD,Right, -.5%) - WINDOW(0,Width)</string>
 												<key>MacroActionType</key>
 												<string>ManipulateWindow</string>
 												<key>TargetApplication</key>
@@ -481,7 +481,7 @@
 				<key>CreationDate</key>
 				<real>651249621.71865106</real>
 				<key>ModificationDate</key>
-				<real>654019773.663342</real>
+				<real>656540491.80053699</real>
 				<key>Name</key>
 				<string>Window Left</string>
 				<key>Triggers</key>
